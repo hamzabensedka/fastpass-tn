@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FastPass - Taste the Joy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#e2e2e5",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#ffe2da",
+                    "on-tertiary-fixed": "#002116",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#5d5e61",
+                    "surface-container": "#ffe9e3",
+                    "on-secondary-fixed": "#1a1c1e",
+                    "primary-container": "#d43f00",
+                    "outline": "#916f65",
+                    "primary-fixed": "#ffdbd0",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#3f2c26",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#3a0b00",
+                    "background": "#fff8f6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#454749",
+                    "tertiary-fixed": "#60fcc6",
+                    "primary-fixed-dim": "#ffb59e",
+                    "on-tertiary-fixed-variant": "#00513b",
+                    "surface-tint": "#ae3200",
+                    "surface-dim": "#f3d3ca",
+                    "outline-variant": "#e6beb2",
+                    "tertiary-fixed-dim": "#3adfab",
+                    "surface-bright": "#fff8f6",
+                    "error": "#ba1a1a",
+                    "surface": "#fff8f6",
+                    "inverse-primary": "#ffb59e",
+                    "on-surface-variant": "#5c4037",
+                    "tertiary": "#00694d",
+                    "surface-container-highest": "#fcdcd3",
+                    "on-secondary-container": "#636467",
+                    "inverse-on-surface": "#ffede8",
+                    "tertiary-container": "#008562",
+                    "secondary-fixed-dim": "#c6c6c9",
+                    "primary": "#aa3000",
+                    "on-primary-container": "#fffbff",
+                    "surface-variant": "#fcdcd3",
+                    "secondary-fixed": "#e2e2e5",
+                    "on-surface": "#281712",
+                    "surface-container-low": "#fff1ed",
+                    "on-background": "#281712",
+                    "on-tertiary-container": "#f5fff8",
+                    "on-primary-fixed-variant": "#852400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "32px",
+                    "lg": "24px",
+                    "container-margin": "20px",
+                    "base": "4px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "gutter": "12px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "display-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(40, 23, 18, 0) 0%, rgba(40, 23, 18, 0.8) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col items-center">
+<!-- Top App Bar - Simplified for Registration Flow (Shell Suppression applied) -->
+<header class="w-full h-16 flex items-center justify-between px-container-margin fixed top-0 left-0 z-50 bg-transparent">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-primary">arrow_back</span>
+</div>
+<div class="font-display-lg text-display-lg font-extrabold text-white">FastPass</div>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="w-full max-w-md min-h-screen flex flex-col relative overflow-hidden">
+<!-- Hero Section: Close-up of Mlawi -->
+<div class="relative h-[530px] w-full shrink-0">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A hyper-realistic, close-up photograph of a traditional Tunisian Mlawi sandwich, showcasing the flaky, golden-brown semolina flatbread wrapped around vibrant fillings of spicy harissa, tuna, and fresh parsley. The lighting is warm and directional, emphasizing the crispy texture of the bread and the moist interior. The background is softly blurred to keep focus on the food, maintaining a premium fast-food aesthetic with an energetic and appetizing vibe that aligns with an orange and yellow color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFCfjiV8VVDhkrouAQWwLykKVWzrNtEmjqeq-23Xk5LC6QNLGb2Pf8q1d-l_OqTZHgtwVnPy9vwD8R-afDN3ZGRJ1cTnXB9UE5MpmqRTuIhaktJjuNea3C6nXIh_XVdKvKigm0pnhLKonybF8oOe842WRGRSPq_FmEFpkbVFdfsOHqtQmcZ9MXxDW3NVPWYtCvxeA6iiRWo8sf5AZWdOVYsWrgJgZzEzEL8ugJ4ZV0j6iQBcAZgx4oJ2eEbC5GWqNhR9d0La6rFnNy"/>
+<div class="absolute inset-0 hero-gradient flex flex-col justify-end p-xl pb-[100px]">
+<span class="bg-primary px-sm py-xs rounded-lg text-white font-label-sm w-fit mb-sm uppercase tracking-widest shadow-lg">New Arrival</span>
+<h1 class="font-display-lg text-[40px] leading-tight text-white mb-base drop-shadow-md">Taste the Joy</h1>
+<p class="font-body-lg text-white opacity-90">Experience the authentic warmth of Tunisian fast food, delivered at the speed of light.</p>
+</div>
+</div>
+<!-- Registration Container -->
+<section class="flex-1 bg-surface rounded-t-[32px] -mt-xl relative z-10 p-xl shadow-2xl">
+<div class="w-12 h-1 bg-outline-variant rounded-full mx-auto mb-lg opacity-50"></div>
+<header class="mb-lg">
+<h2 class="font-headline-lg text-on-surface">Create Account</h2>
+<p class="font-body-md text-on-surface-variant">Join the FastPass family for exclusive rewards.</p>
+</header>
+<form class="space-y-md">
+<!-- Full Name -->
+<div class="space-y-xs">
+<label class="font-label-lg text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">person</span>
+                        Full Name
+                    </label>
+<input class="w-full h-14 px-md rounded-xl bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-body-lg text-on-surface" placeholder="Walid Ben Salah" type="text"/>
+</div>
+<!-- Phone Number -->
+<div class="space-y-xs">
+<label class="font-label-lg text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">phone_iphone</span>
+                        Phone Number
+                    </label>
+<div class="flex gap-sm">
+<div class="flex items-center justify-center h-14 w-20 rounded-xl bg-surface-container-high border border-outline-variant font-label-lg text-on-primary-fixed-variant">
+                            +216
+                        </div>
+<input class="flex-1 h-14 px-md rounded-xl bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-body-lg text-on-surface" placeholder="12 345 678" type="tel"/>
+</div>
+</div>
+<!-- Terms -->
+<div class="flex items-start gap-sm pt-sm">
+<input class="mt-1 w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" id="terms" type="checkbox"/>
+<label class="font-body-md text-on-surface-variant" for="terms">
+                        I agree to the <span class="text-primary font-bold">Terms of Service</span> and <span class="text-primary font-bold">Privacy Policy</span>.
+                    </label>
+</div>
+<!-- Action Button -->
+<button class="w-full h-16 bg-primary hover:bg-primary-container text-on-primary font-headline-md rounded-xl shadow-lg flex items-center justify-center gap-sm active:scale-[0.98] transition-transform mt-lg group" type="submit">
+                    Start Your Journey
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<!-- Social Login / Footer -->
+<div class="mt-xl text-center space-y-md">
+<div class="relative flex items-center justify-center">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-outline-variant"></div></div>
+<span class="relative bg-surface px-md font-label-sm text-on-surface-variant uppercase">Or register with</span>
+</div>
+<div class="flex gap-md">
+<button class="flex-1 h-14 rounded-xl border border-outline-variant flex items-center justify-center gap-sm font-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[#1877F2]">social_leaderboard</span>
+                        Facebook
+                    </button>
+<button class="flex-1 h-14 rounded-xl border border-outline-variant flex items-center justify-center gap-sm font-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-error">google</span>
+                        Google
+                    </button>
+</div>
+<p class="font-body-md text-on-surface-variant pt-md">
+                    Already have an account? <span class="text-primary font-bold">Sign In</span>
+</p>
+</div>
+</section>
+<!-- Bottom padding to avoid overflow issues -->
+<div class="h-xl"></div>
+</main>
+<!-- Navigation suppressed per rules for Transactional/Onboarding screens -->
+</body></html>

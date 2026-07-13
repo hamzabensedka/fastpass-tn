@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FastPass - Discover Nearby</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffb59e",
+                    "on-tertiary-fixed": "#002116",
+                    "surface-container": "#ffe9e3",
+                    "secondary-fixed": "#e2e2e5",
+                    "surface-dim": "#f3d3ca",
+                    "tertiary": "#00694d",
+                    "surface-container-highest": "#fcdcd3",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e6beb2",
+                    "outline": "#916f65",
+                    "surface-variant": "#fcdcd3",
+                    "inverse-primary": "#ffb59e",
+                    "on-background": "#281712",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#3a0b00",
+                    "surface": "#fff8f6",
+                    "surface-container-high": "#ffe2da",
+                    "on-tertiary-fixed-variant": "#00513b",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffdbd0",
+                    "inverse-on-surface": "#ffede8",
+                    "primary": "#aa3000",
+                    "on-primary-fixed-variant": "#852400",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#636467",
+                    "on-surface": "#281712",
+                    "tertiary-fixed-dim": "#3adfab",
+                    "secondary-container": "#e2e2e5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#ae3200",
+                    "surface-container-low": "#fff1ed",
+                    "inverse-surface": "#3f2c26",
+                    "secondary": "#5d5e61",
+                    "on-tertiary-container": "#f5fff8",
+                    "on-secondary-fixed": "#1a1c1e",
+                    "secondary-fixed-dim": "#c6c6c9",
+                    "background": "#fff8f6",
+                    "primary-container": "#d43f00",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#008562",
+                    "on-secondary-fixed-variant": "#454749",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#5c4037",
+                    "surface-bright": "#fff8f6",
+                    "tertiary-fixed": "#60fcc6",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "12px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "base": "4px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "container-margin": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "label-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                    "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                    "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                    "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                    "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                    "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #fff8f6;
+            color: #281712;
+            overflow-x: hidden;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<main class="flex-grow flex flex-col items-center justify-center px-container-margin py-xl max-w-lg mx-auto w-full relative">
+<div class="mb-lg w-full flex justify-center">
+<div class="relative w-full aspect-square max-w-[320px] flex items-center justify-center">
+<div class="absolute inset-0 bg-primary-container/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 w-full h-full bg-surface-container rounded-[40px] shadow-lg flex items-center justify-center overflow-hidden border border-outline-variant/30">
+<img alt="Map illustration" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="A clean and modern flat-style illustration of a stylized map with a vibrant orange location pin dropping into a city grid. The map features soft pastel tones of light cream and pale grey, contrasting with the energetic primary orange of the pin and brand elements. The composition is minimalist and high-contrast, designed for a premium light-mode mobile interface. Subtle depth is added through soft shadows and a light-key studio lighting effect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyfDJIbh_M9pldXoa50OAYdSH9DHHCytCDuuZVa1sTiBWGHvxpnchhPPY3WPjDjsFMLUOzqgSVOPcWTxCAXqJxNG6PmTIe7mkQcNN_nUnvIWSImxOl7C-_i2swsnx1qIei8uQnnURFM7XXSrJb7dlOhNV8u7z28qFyeWlH3g9hK-GY93j2ACBOgsv_KxDpBu4n4o0CvuDJcJeuJm08w3WMVxtT9G1I5_1C9bUzJPg1e4aUf22gKeMPA5LvwAZvjiuMg-VwPLD_2we0"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center shadow-2xl border-4 border-surface shadow-primary/40">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">near_me</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center w-full mb-xl">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">
+                Discover Nearby
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[280px] mx-auto">
+                Find the best deals from restaurants around you
+            </p>
+</div>
+<div class="flex gap-2 mb-xl">
+<div class="h-1.5 w-1.5 rounded-full bg-outline-variant"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-outline-variant"></div>
+<div class="h-1.5 w-6 rounded-full bg-primary"></div>
+</div>
+<div class="w-full space-y-md">
+<button class="w-full py-md px-lg bg-primary text-on-primary font-headline-md text-headline-md rounded-xl shadow-lg active:scale-95 transition-transform duration-150 hover:opacity-90 flex items-center justify-center gap-2">
+                Get Started
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full py-sm text-center">
+<span class="font-label-lg text-label-lg text-on-surface-variant">
+                    I already have an account
+                </span>
+</button>
+</div>
+<div class="mt-xl grid grid-cols-2 gap-gutter w-full opacity-60">
+<div class="p-md bg-surface-container-low rounded-xl border border-outline-variant/20 flex flex-col gap-xs">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">redeem</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Fast Rewards</span>
+</div>
+<div class="p-md bg-surface-container-low rounded-xl border border-outline-variant/20 flex flex-col gap-xs">
+<span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Instant Access</span>
+</div>
+</div>
+</main>
+<div class="fixed top-0 left-0 w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</body></html>

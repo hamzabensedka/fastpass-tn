@@ -1,0 +1,36 @@
+{
+  "name": "fastpass-tn",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@10.0.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=@fastpass/web",
+    "dev:mobile": "turbo run dev --filter=@fastpass/mobile",
+    "dev:mobile:web": "turbo run dev:web --filter=@fastpass/mobile",
+    "lint": "turbo run lint",
+    "load-test:scans": "node scripts/load-test-scans.mjs",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "verify": "npm run typecheck && npm run lint && npm run test"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "overrides": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "ajv": "^8.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "eslint": "^9.25.1",
+    "prettier": "^3.5.3",
+    "supabase": "^2.98.2",
+    "turbo": "^2.5.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  }
+}

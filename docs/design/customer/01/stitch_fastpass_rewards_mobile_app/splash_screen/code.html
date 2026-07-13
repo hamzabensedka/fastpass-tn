@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#ffb59e",
+            "on-tertiary-fixed": "#002116",
+            "surface-container": "#ffe9e3",
+            "secondary-fixed": "#e2e2e5",
+            "surface-dim": "#f3d3ca",
+            "tertiary": "#00694d",
+            "surface-container-highest": "#fcdcd3",
+            "on-primary-container": "#fffbff",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#e6beb2",
+            "outline": "#916f65",
+            "surface-variant": "#fcdcd3",
+            "inverse-primary": "#ffb59e",
+            "on-background": "#281712",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#3a0b00",
+            "surface": "#fff8f6",
+            "surface-container-high": "#ffe2da",
+            "on-tertiary-fixed-variant": "#00513b",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#ffdbd0",
+            "inverse-on-surface": "#ffede8",
+            "primary": "#aa3000",
+            "on-primary-fixed-variant": "#852400",
+            "on-tertiary": "#ffffff",
+            "on-secondary-container": "#636467",
+            "on-surface": "#281712",
+            "tertiary-fixed-dim": "#3adfab",
+            "secondary-container": "#e2e2e5",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#ae3200",
+            "surface-container-low": "#fff1ed",
+            "inverse-surface": "#3f2c26",
+            "secondary": "#5d5e61",
+            "on-tertiary-container": "#f5fff8",
+            "on-secondary-fixed": "#1a1c1e",
+            "secondary-fixed-dim": "#c6c6c9",
+            "background": "#fff8f6",
+            "primary-container": "#d43f00",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#008562",
+            "on-secondary-fixed-variant": "#454749",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#5c4037",
+            "surface-bright": "#fff8f6",
+            "tertiary-fixed": "#60fcc6",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "12px",
+            "xs": "4px",
+            "md": "16px",
+            "sm": "8px",
+            "base": "4px",
+            "xl": "32px",
+            "lg": "24px",
+            "container-margin": "20px"
+          },
+          "fontFamily": {
+            "display-lg": ["Montserrat"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Montserrat"],
+            "headline-lg": ["Montserrat"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .splash-gradient {
+      background: linear-gradient(135deg, #aa3000 0%, #d43f00 100%);
+    }
+    .velocity-lines {
+      background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-hidden">
+<!-- Splash Screen Container -->
+<main class="relative h-screen w-full flex flex-col items-center justify-center splash-gradient overflow-hidden">
+<!-- Background Velocity Texture -->
+<div class="absolute inset-0 velocity-lines opacity-30"></div>
+<!-- Decorative Radial Glow -->
+<div class="absolute w-[600px] h-[600px] bg-primary-fixed rounded-full blur-[120px] opacity-20 -top-40 -left-40"></div>
+<div class="absolute w-[400px] h-[400px] bg-tertiary-container rounded-full blur-[100px] opacity-10 bottom-0 right-0"></div>
+<!-- Central Content Area -->
+<div class="relative z-10 flex flex-col items-center px-container-margin text-center">
+<!-- Brand Logo Container -->
+<div class="mb-lg p-xl bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl">
+<img alt="FastPass Logo" class="w-64 h-auto drop-shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC32kwlr9X27lDM-TX_jq2Tz9W6NL856ffyISmx0jkdcDbFijt_skFlGvGsy7Ztbwshh-CehFEGlko7jVzvOWRoldSaLBiy-MFCPtLX7h4KsMB4R6ZRouDblTU9fmbzKEYlq5ju9v39PLCbC-Ym2pCvi-kKTYNdmzasfXs1oIMgwfD5TFDUSpYpSuDs83HByHGNQuyBjrlNC0rYHZuoIw3Xz2hB7W-QmT35S3_q4eLgkfH-LjNGhT4vjMNx3opQUIOO6L1V_iGbP46"/>
+</div>
+<!-- Tagline -->
+<div class="space-y-sm">
+<h1 class="font-headline-lg text-headline-lg text-white tracking-tight">
+          Earn points. Eat more. Pay less.
+        </h1>
+<div class="flex items-center justify-center space-x-sm mt-md">
+<span class="h-[2px] w-8 bg-white/30 rounded-full"></span>
+<p class="font-label-lg text-label-lg text-white/80 uppercase tracking-[0.2em]">Premium Velocity</p>
+<span class="h-[2px] w-8 bg-white/30 rounded-full"></span>
+</div>
+</div>
+</div>
+<!-- Loading Indicator / Progress -->
+<div class="absolute bottom-xl left-1/2 -translate-x-1/2 w-full max-w-[200px] px-gutter">
+<div class="h-1.5 w-full bg-white/20 rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-white rounded-full shadow-[0_0_12px_rgba(255,255,255,0.5)]"></div>
+</div>
+<p class="mt-sm font-label-sm text-label-sm text-white/60 text-center">Initializing FastPass...</p>
+</div>
+<!-- Bottom Aesthetic Accents -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+</main>
+<!-- Interaction Cue (Invisible but structural for future onboarding) -->
+<div class="sr-only">
+    Splash screen for FastPass reward and dining application.
+  </div>
+<!-- Background Imagery (Conceptual Overlay) -->
+<div class="fixed inset-0 z-[-1] opacity-5">
+<img class="w-full h-full object-cover grayscale" data-alt="A high-end, contemporary restaurant interior with dramatic warm lighting reflecting off polished surfaces. The scene captures the fast-paced energy of a premium bistro with blurred movement of staff and steam from fresh plates. The color palette is rich with deep oranges, charcoals, and golden highlights, matching a sophisticated and energetic brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbKX32PYhB6zMkjeNTRuD-RbDmkArmpUq5acNL-6wWNVbE17XaKYK6A89Y8k4f1jVAY8K58yHiT_XlHqObXDhTkcbmkq8HnLcA_gR15wD_-gpn84yZunrTAuBYK-f-GOQS4N_0FYTxi8uQFsDpa2hw6IWC93RdZtmJsyqS5jAECHKHW1m6p2DUS2rsV94tgwg5RJUZGWaILZjWYNmaAriV3pvp9QAcv40BEqiMuhnYaanjGsuIsE7BlGyZz7MdTeSdi5CgcxvkxtB9"/>
+</div>
+</body></html>

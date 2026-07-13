@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "primary-fixed-dim": "#ffb59e",
+                  "on-tertiary-fixed": "#002116",
+                  "surface-container": "#ffe9e3",
+                  "secondary-fixed": "#e2e2e5",
+                  "surface-dim": "#f3d3ca",
+                  "tertiary": "#00694d",
+                  "surface-container-highest": "#fcdcd3",
+                  "on-primary-container": "#fffbff",
+                  "on-secondary": "#ffffff",
+                  "outline-variant": "#e6beb2",
+                  "outline": "#916f65",
+                  "surface-variant": "#fcdcd3",
+                  "inverse-primary": "#ffb59e",
+                  "on-background": "#281712",
+                  "error": "#ba1a1a",
+                  "on-primary-fixed": "#3a0b00",
+                  "surface": "#fff8f6",
+                  "surface-container-high": "#ffe2da",
+                  "on-tertiary-fixed-variant": "#00513b",
+                  "on-error-container": "#93000a",
+                  "primary-fixed": "#ffdbd0",
+                  "inverse-on-surface": "#ffede8",
+                  "primary": "#aa3000",
+                  "on-primary-fixed-variant": "#852400",
+                  "on-tertiary": "#ffffff",
+                  "on-secondary-container": "#636467",
+                  "on-surface": "#281712",
+                  "tertiary-fixed-dim": "#3adfab",
+                  "secondary-container": "#e2e2e5",
+                  "surface-container-lowest": "#ffffff",
+                  "surface-tint": "#ae3200",
+                  "surface-container-low": "#fff1ed",
+                  "inverse-surface": "#3f2c26",
+                  "secondary": "#5d5e61",
+                  "on-tertiary-container": "#f5fff8",
+                  "on-secondary-fixed": "#1a1c1e",
+                  "secondary-fixed-dim": "#c6c6c9",
+                  "background": "#fff8f6",
+                  "primary-container": "#d43f00",
+                  "error-container": "#ffdad6",
+                  "tertiary-container": "#008562",
+                  "on-secondary-fixed-variant": "#454749",
+                  "on-primary": "#ffffff",
+                  "on-surface-variant": "#5c4037",
+                  "surface-bright": "#fff8f6",
+                  "tertiary-fixed": "#60fcc6",
+                  "on-error": "#ffffff"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "gutter": "12px",
+                  "xs": "4px",
+                  "md": "16px",
+                  "sm": "8px",
+                  "base": "4px",
+                  "xl": "32px",
+                  "lg": "24px",
+                  "container-margin": "20px"
+          },
+          "fontFamily": {
+                  "display-lg": ["Montserrat"],
+                  "label-lg": ["Plus Jakarta Sans"],
+                  "headline-md": ["Montserrat"],
+                  "headline-lg": ["Montserrat"],
+                  "label-sm": ["Plus Jakarta Sans"],
+                  "body-md": ["Plus Jakarta Sans"],
+                  "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+                  "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                  "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                  "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                  "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                  "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                  "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .active-dot {
+      width: 24px;
+      height: 8px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface flex flex-col min-h-screen items-center justify-center p-container-margin">
+<!-- Header Branding (Hidden navigation as per Onboarding rule) -->
+<header class="fixed top-0 w-full h-16 flex items-center justify-center px-container-margin">
+<h1 class="font-display-lg text-headline-lg font-extrabold text-primary tracking-tighter">FastPass</h1>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center w-full max-w-md">
+<!-- Hero Illustration Section -->
+<div class="relative w-full aspect-square flex items-center justify-center mb-xl">
+<div class="absolute inset-0 bg-surface-container rounded-full scale-90 blur-3xl opacity-50"></div>
+<!-- Premium Illustration with High-Clarity Layout -->
+<div class="relative z-10 w-4/5 h-4/5 bg-gradient-to-br from-primary to-primary-container rounded-[2.5rem] shadow-2xl flex flex-col items-center justify-center p-lg transform -rotate-3 overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-xl"></div>
+<div class="absolute bottom-0 left-0 w-24 h-24 bg-black/5 rounded-full -ml-8 -mb-8 blur-lg"></div>
+<div class="bg-white/95 p-md rounded-2xl shadow-lg transform rotate-6 mb-sm">
+<span class="material-symbols-outlined text-[48px] text-primary" style="font-variation-settings: 'FILL' 1;">redeem</span>
+</div>
+<div class="mt-md text-center">
+<div class="text-on-primary-container font-headline-md text-headline-md opacity-90">UNLOCKED</div>
+<div class="text-on-primary-container/70 font-label-sm text-label-sm tracking-widest mt-xs">PREMIUM TIER</div>
+</div>
+<!-- Floaties -->
+<div class="absolute top-10 left-10 w-4 h-4 bg-tertiary rounded-full animate-bounce"></div>
+<div class="absolute bottom-12 right-8 w-6 h-6 bg-surface-container-highest/20 rounded-lg transform rotate-45"></div>
+</div>
+<!-- Detail Card Overlay -->
+<div class="absolute bottom-4 right-2 z-20 bg-white p-sm rounded-xl shadow-xl flex items-center gap-sm border border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<div class="pr-md">
+<p class="font-label-sm text-label-sm text-on-surface">Free Bistro Entree</p>
+<p class="text-[10px] font-body-md text-on-surface-variant opacity-60">Ready to redeem</p>
+</div>
+</div>
+</div>
+<!-- Content Section -->
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-display-lg text-on-background mb-md leading-tight">Redeem Rewards</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xs mx-auto">
+        Turn your points into free meals, drinks, and exclusive deals
+      </p>
+</div>
+<!-- Pagination Indicators -->
+<div class="flex gap-2 mb-xl">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="active-dot rounded-full bg-primary transition-all duration-300"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</main>
+<!-- CTA Section -->
+<footer class="w-full max-w-md space-y-md pb-xl">
+<button class="w-full h-14 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg rounded-xl shadow-lg hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-sm">
+      Get Started
+      <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full text-center py-base">
+<span class="font-body-md text-body-md text-on-surface-variant">I already have an account</span>
+</button>
+</footer>
+<!-- Visual Asset for data-alt requirement -->
+<div class="hidden">
+<img data-alt="A premium gift box illustration in a vibrant light-mode user interface. The box is styled with Energetic Orange and Deep Charcoal accents, floating amidst soft, diffused shadows and abstract geometric shapes. The scene is illuminated by high-clarity studio lighting that emphasizes tactile depth and modern corporate aesthetics. The background is a clean off-white gradient, conveying a sense of rewarding efficiency and gourmet quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBItraIGtjVZpA4F8M82Ud3k1VJF3bTI9jZJ9qT7xJpz8rFUW9tNrxN_8tlx6hSapXsHIuFOWtgqfV3XB1rvQXQ6g42utkku4v6P8VyPYOqgWUR01cyTMK1fEItf1VUMa-JqAjQZSULa3Z0XUXNHY-qsy2wiAxxvvYu6tp78UeDvIKBZd7BQln3MdMaBvnYskIBztNwGN8Rt93tuhHKzsQsqIius_AjHuL2_tRwUkE6mAIl3urqGH2CnCnJuHsES03jxeNtfvxyPVXW"/>
+</div>
+</body></html>

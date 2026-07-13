@@ -1,0 +1,31 @@
+---
+description: "FastPassTN: only when creating a NEW UI screen — translate HTML/PNG to Expo React Native faithfully"
+alwaysApply: false
+globs: apps/mobile/**/*.{tsx,ts},Designe/**/*
+---
+
+# New UI screen (FastPassTN) — HTML / PNG → React Native
+
+**Turn this rule on (or let globs attach it) only when the user is asking to create a *new* UI screen for this project** — the FastPass Tunisia **Expo mobile app** (`apps/mobile`), using **HTML** (e.g. Stitch/Tailwind under `Designe/`) and/or **PNG** screenshots as references.
+
+Do **not** use this rule as default guidance for backend, APIs, or non-UI work.
+
+## Mandatory behavior
+
+1. **Source of truth** — HTML + PNG define the screen. Match layout, copy, spacing, radii, shadows, borders, and **exact hex** (or Tailwind tokens → hex from the HTML config).
+
+2. **Literal translation** — Same visual result in **React Native**, not a redesigned “clean” variant.
+
+3. **Stack** — **Expo + React Native** in `apps/mobile`: `StyleSheet`, `Pressable`, route files under `app/`, shared UI under `src/components/ui`, Stitch tokens under `src/features/customer/stitch/colors.ts` where applicable. **`expo-linear-gradient`** when mocks use gradients. **Icons:** Material Symbols in HTML → **`@expo/vector-icons`** (`MaterialIcons`, etc.).
+
+4. **Assets** — Reuse the **same image URLs** from HTML unless missing.
+
+5. **Wire the screen** — Add/adjust the correct **`app/`** route(s) and navigation; keep scope limited to this screen + justified shared pieces (`Button`, `TextLink`, tokens).
+
+6. **Behavior** — Carousels, paging, animated dots, CTAs: match the HTML/PNG behavior (`ScrollView`/`Animated` as needed).
+
+## Reject
+
+- Guessed colors/spacing, extra sections, unrelated refactors, unsolicited markdown docs.
+
+If HTML vs PNG disagree: **PNG for pixel layout**, **HTML for tokens and copy** — mention briefly.

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FastPass - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#ffb59e",
+            "on-tertiary-fixed": "#002116",
+            "surface-container": "#ffe9e3",
+            "secondary-fixed": "#e2e2e5",
+            "surface-dim": "#f3d3ca",
+            "tertiary": "#00694d",
+            "surface-container-highest": "#fcdcd3",
+            "on-primary-container": "#fffbff",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#e6beb2",
+            "outline": "#916f65",
+            "surface-variant": "#fcdcd3",
+            "inverse-primary": "#ffb59e",
+            "on-background": "#281712",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#3a0b00",
+            "surface": "#fff8f6",
+            "surface-container-high": "#ffe2da",
+            "on-tertiary-fixed-variant": "#00513b",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#ffdbd0",
+            "inverse-on-surface": "#ffede8",
+            "primary": "#aa3000",
+            "on-primary-fixed-variant": "#852400",
+            "on-tertiary": "#ffffff",
+            "on-secondary-container": "#636467",
+            "on-surface": "#281712",
+            "tertiary-fixed-dim": "#3adfab",
+            "secondary-container": "#e2e2e5",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#ae3200",
+            "surface-container-low": "#fff1ed",
+            "inverse-surface": "#3f2c26",
+            "secondary": "#5d5e61",
+            "on-tertiary-container": "#f5fff8",
+            "on-secondary-fixed": "#1a1c1e",
+            "secondary-fixed-dim": "#c6c6c9",
+            "background": "#fff8f6",
+            "primary-container": "#d43f00",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#008562",
+            "on-secondary-fixed-variant": "#454749",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#5c4037",
+            "surface-bright": "#fff8f6",
+            "tertiary-fixed": "#60fcc6",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "12px",
+            "xs": "4px",
+            "md": "16px",
+            "sm": "8px",
+            "base": "4px",
+            "xl": "32px",
+            "lg": "24px",
+            "container-margin": "20px"
+          },
+          "fontFamily": {
+            "display-lg": ["Montserrat"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Montserrat"],
+            "headline-lg": ["Montserrat"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .premium-gradient {
+      background: linear-gradient(180deg, #aa3000 0%, #d43f00 100%);
+    }
+    .qr-shadow {
+      box-shadow: 0 12px 24px rgba(93, 94, 97, 0.12);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-hidden">
+<!-- Top AppBar (Identity Anchor) -->
+<header class="flex items-center justify-between px-container-margin w-full h-16 bg-surface z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="bolt">bolt</span>
+<h1 class="font-display-lg text-headline-lg font-bold text-primary">FastPass</h1>
+</div>
+<button class="text-on-surface-variant font-label-lg hover:opacity-80 transition-opacity">Skip</button>
+</header>
+<!-- Main Onboarding Content -->
+<main class="flex-1 flex flex-col items-center justify-center px-container-margin py-xl text-center">
+<!-- Illustration Section -->
+<div class="relative w-full max-w-[280px] aspect-square mb-xl flex items-center justify-center">
+<!-- Background Decorative Elements -->
+<div class="absolute inset-0 bg-surface-container rounded-full scale-110 opacity-50 blur-2xl"></div>
+<!-- QR Code Illustration Container -->
+<div class="relative z-10 w-full h-full bg-surface border border-outline-variant rounded-xl qr-shadow p-6 flex flex-col items-center justify-between">
+<div class="w-full flex justify-between items-center mb-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+<span class="material-symbols-outlined text-primary" data-icon="restaurant">restaurant</span>
+</div>
+<!-- QR Code Placeholder -->
+<div class="w-40 h-40 bg-surface border-4 border-primary rounded-lg p-2 flex flex-col gap-2 relative overflow-hidden">
+<div class="grid grid-cols-4 grid-rows-4 gap-1 w-full h-full">
+<div class="bg-on-background rounded-sm"></div><div class="bg-on-background rounded-sm"></div><div class="bg-transparent"></div><div class="bg-on-background rounded-sm"></div>
+<div class="bg-on-background rounded-sm"></div><div class="bg-transparent"></div><div class="bg-on-background rounded-sm"></div><div class="bg-transparent"></div>
+<div class="bg-transparent"></div><div class="bg-on-background rounded-sm"></div><div class="bg-on-background rounded-sm"></div><div class="bg-on-background rounded-sm"></div>
+<div class="bg-on-background rounded-sm"></div><div class="bg-transparent"></div><div class="bg-transparent"></div><div class="bg-on-background rounded-sm"></div>
+</div>
+<!-- Scanning Line Animation Simulation -->
+<div class="absolute left-0 right-0 top-1/2 h-1 bg-primary opacity-40 shadow-[0_0_8px_rgba(170,48,0,0.6)]"></div>
+</div>
+<div class="mt-4 w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-tertiary"></div>
+</div>
+</div>
+<!-- Floating Reward Chip -->
+<div class="absolute -bottom-4 -right-4 bg-tertiary-container text-on-tertiary-container px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transform rotate-6 scale-110">
+<span class="material-symbols-outlined text-sm" data-icon="stars" data-weight="fill">stars</span>
+<span class="font-label-sm">+1 Point</span>
+</div>
+</div>
+<!-- Copy Text -->
+<div class="max-w-xs space-y-md">
+<h2 class="font-headline-lg text-display-lg text-on-surface">Scan &amp; Earn</h2>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+        Show your QR code at any partner restaurant and earn <span class="text-primary font-bold">1 point per dinar</span> spent
+      </p>
+</div>
+<!-- Pagination Indicators -->
+<div class="flex gap-2 mt-xl">
+<div class="w-6 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</main>
+<!-- CTA Section -->
+<footer class="p-container-margin pb-xl space-y-md">
+<button class="w-full h-14 premium-gradient text-white rounded-xl font-headline-md shadow-lg active:scale-95 transition-transform duration-150">
+      Get Started
+    </button>
+<button class="w-full py-2 text-on-surface-variant font-label-lg hover:text-primary transition-colors">
+      I already have an account
+    </button>
+</footer>
+<!-- Visual Accent: Decorative blur for premium feel -->
+<div class="fixed top-0 right-0 -z-10 w-64 h-64 bg-primary-fixed-dim opacity-10 blur-[100px] pointer-events-none"></div>
+<div class="fixed bottom-0 left-0 -z-10 w-80 h-80 bg-tertiary-fixed-dim opacity-5 blur-[120px] pointer-events-none"></div>
+</body></html>
